@@ -8,7 +8,7 @@ let iterations;
 let isTraining = false;
 
 function setup() {
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 500; i++) {
     points.push(new Point());
   }
 
@@ -19,12 +19,12 @@ function setup() {
   let trainBtn = (button = createButton("Train Continously"));
   button.position(600, 350);
   button.mousePressed(startTraining);
-  let stopBtn = (button = createButton("Stop Training"));
+  let stopBtn = (button = createButton("Pause Training"));
   nextBtn.class("btn");
   trainBtn.class("btn");
   stopBtn.class("btn");
   button.position(600, 450);
-  button.mousePressed(stopTraining);
+  button.mousePressed(pauseTraining);
   iterations = createDiv();
   iterations.style("font-size", "32");
   iterations.position(600, 10);
@@ -93,7 +93,9 @@ function nextIteration() {
   }
 }
 
-function stopTraining() {
+function pauseTraining() {
   clearInterval(trainingInterval);
   isTraining = false;
+  console.log("Training Paused");
+  alert("Training Paused");
 }
