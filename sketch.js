@@ -35,18 +35,18 @@ function setup() {
 function draw() {
   background(255);
 
-  stroke(0);
-
   iterations.html(
     `<p>Iterations: ${brain.iterations}</p><p>Accuracy: ${
       brain.accuracy
     }%</p><p>Learning Rate: ${brain.learningRate}</p>`
   );
 
+  stroke(255, 0, 0);
   let p1 = new Point(-1, brain.getY(-1));
   let p2 = new Point(1, brain.getY(1));
   line(p2.pixelX(), p2.pixelY(), p1.pixelX(), p1.pixelY());
 
+  stroke(0, 255, 0);
   let p3 = new Point(-1, eq(-1));
   let p4 = new Point(1, eq(1));
   line(p3.pixelX(), p3.pixelY(), p4.pixelX(), p4.pixelY());
@@ -89,6 +89,7 @@ function nextIteration() {
     clearInterval(trainingInterval);
     isTraining = false;
     console.log("Training Complete");
+    alert("Training Complete");
   }
 }
 

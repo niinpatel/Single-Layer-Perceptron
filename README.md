@@ -2,11 +2,14 @@
 
 Perceptrons are the building block of artificial neural networks. You can think of these are individual neurons of the neural network.
 
+**Here's how a simple artificial neural network looks like**
 ![cute neural networks](neural-network-3637503_960_720.png)
 
 Each of these circles can be called as an individual perceptron.
 
 A perceptron is a simple program that takes in a bunch of inputs and transforms them into an output.
+
+**Visual representation of a perceptron**
 
 ![perceptron](Single_layer_perceptron.png)
 

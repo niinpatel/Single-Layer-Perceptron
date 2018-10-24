@@ -31,9 +31,18 @@ class Perceptron {
       this.weights[i] += this.error * inputs[i] * this.learningRate;
     }
     this.iterations++;
+
+    this.learningRate =
+      this.iterations > 350
+        ? this.iterations > 900
+          ? 0.001
+          : 0.005
+        : this.learningRate;
+
     if (this.error == 0) {
-      this.accuracy = (++this.correctGuesses / this.iterations) * 100;
+      this.correctGuesses++;
     }
+    this.accuracy = (this.correctGuesses / this.iterations) * 100;
     console.log("iteration:", this.iterations, ", error:", this.error);
   }
 
