@@ -35,7 +35,9 @@ class Perceptron {
     this.learningRate =
       this.iterations > 350
         ? this.iterations > 900
-          ? 0.001
+          ? this.iterations > 2500
+            ? 0.0005
+            : 0.001
           : 0.005
         : this.learningRate;
 
