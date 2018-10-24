@@ -8,7 +8,7 @@ let iterations;
 let isTraining = false;
 
 function setup() {
-  for (let i = 0; i < 500; i++) {
+  for (let i = 0; i < 100; i++) {
     points.push(new Point());
   }
 
