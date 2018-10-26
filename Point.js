@@ -23,12 +23,12 @@ class Point {
 
   show() {
     stroke(0);
-    fill(0)
+    fill(0);
 
     if (this.label == 1) {
-      fill(255);
+      fill(0, 0, 255);
     } else {
-      fill(0);
+      fill(255, 0, 144);
     }
 
     let px = this.pixelX();
